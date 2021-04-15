@@ -1,2 +1,2 @@
-namespace: fluxcd-demo
+namespace: default
 sleep_secs: "10000"
