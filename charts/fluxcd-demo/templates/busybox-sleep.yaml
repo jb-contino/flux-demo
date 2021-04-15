@@ -9,4 +9,4 @@ spec:
     image: busybox
     args:
     - sleep
-    - {{ .Values.sleep_secs }}
+    - "{{ .Values.sleep_secs }}"
