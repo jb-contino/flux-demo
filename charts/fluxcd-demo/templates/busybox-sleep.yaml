@@ -3,10 +3,14 @@ kind: Pod
 metadata:
   name: busybox-sleep
   namespace: "{{ .Values.namespace }}"
+  labels:
+    app: busybox-sleep
 spec:
   containers:
-  - name: busybox
-    image: busybox
-    args:
-    - sleep
-    - "{{ .Values.sleep_secs }}"
+  - image: busybox
+    command:
+      - sleep
+      - "3600"
+    imagePullPolicy: IfNotPresent
+    name: busybox
+  restartPolicy: Always
