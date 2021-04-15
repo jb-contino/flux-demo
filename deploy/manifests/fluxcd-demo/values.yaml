@@ -1,0 +1,2 @@
+namespace: fluxcd-demo
+sleep_secs: "10000"
